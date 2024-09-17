@@ -1,10 +1,11 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 import config from 'config';
 import dotenv from 'dotenv';
+import { dbUrl } from './env.config';
 
 dotenv.config();
 
-const dbURI = process.env.DB_URL || '';
+const dbURI = dbUrl;
 
 export const connectDB = async () => {
     try {

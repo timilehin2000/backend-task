@@ -12,7 +12,6 @@ const server = http.createServer(app);
 // start the server
 const startServer = async (): Promise<void> => {
     try {
-        console.log(process.env.NODE_ENV);
         await connectDB();
 
         app.listen(port, () => {
