@@ -1,1 +1,0 @@
-{"root":["./src/app.ts","./src/server.ts","./src/config/db.config.ts","./src/config/env.config.ts","./src/models/product.model.ts","./src/models/user.model.ts","./src/routes/auth.route.ts","./src/routes/index.ts","./src/routes/product.route.ts","./src/types/express.d.ts"],"version":"5.6.2"}

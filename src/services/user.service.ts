@@ -1,6 +1,7 @@
+import { IUserInput } from '../interfaces/user.interface';
 import { IUser, User } from '../models/user.model';
 
-export const createUser = async (userData: IUser): Promise<IUser> => {
+export const createUser = async (userData: IUserInput): Promise<IUser> => {
     const newUser = await new User(userData).save();
 
     return newUser;

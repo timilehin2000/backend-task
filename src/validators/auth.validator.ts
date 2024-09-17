@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-export const registerPayload = Joi.object({
+export const registerSchema = Joi.object({
     email: Joi.string().email().required().messages({
         'any.required': 'Email is required',
         'string.email': 'Email is invalid',
@@ -14,7 +14,9 @@ export const registerPayload = Joi.object({
     password: Joi.string()
         .min(8)
         .max(30)
-        .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*]).+$'))
+        .pattern(
+            new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*]).+$'),
+        )
         .required()
         .messages({
             'string.min': `Password should have a minimum length of 8`,
@@ -24,7 +26,7 @@ export const registerPayload = Joi.object({
         }),
 });
 
-export const loginPayload = Joi.object({
+export const loginSchema = Joi.object({
     email: Joi.string().email().required().messages({
         'any.required': 'Email is required',
         'string.email': 'Email is invalid',

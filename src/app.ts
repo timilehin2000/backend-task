@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
 import router from './routes';
+import { notFound } from './middleware/errorHandler/notFound';
 
 const app: Application = express();
 
@@ -26,5 +27,7 @@ app.use(express.json({}));
 app.use(helmet());
 
 app.use(router);
+
+app.use('*', notFound);
 
 export default app;

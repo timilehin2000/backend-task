@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
+import { errorResponse } from '../../utiils/responses/apiResponses';
 
 const validatorMiddleware = (
     schema: Joi.Schema,
@@ -11,10 +12,11 @@ const validatorMiddleware = (
         });
 
         if (error) {
-            const message = error.details.map((err: Joi.ValidationErrorItem) => err.message).join(', ');
-            console.log(error.details);
+            const errorMessage = error.details
+                .map((err: Joi.ValidationErrorItem) => err.message)
+                .join(', ');
 
-            //return an error message here
+            return errorResponse(res, errorMessage, 400);
         }
 
         next();

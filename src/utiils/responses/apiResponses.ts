@@ -1,6 +1,11 @@
 import { Response } from 'express';
 
-export const sendSuccessResponse = (res: Response, message: string, data?: Object | Array<Object>, statusCode = 200) => {
+export const successResponse = (
+    res: Response,
+    message: string,
+    data?: Object | Array<Object>,
+    statusCode = 200,
+) => {
     return res.status(statusCode).json({
         status: true,
         message,
@@ -8,10 +13,13 @@ export const sendSuccessResponse = (res: Response, message: string, data?: Objec
     });
 };
 
-export const sendErrorResponse = (res: Response, message: string, data?: Object | Array<Object>, statusCode = 500) => {
+export const errorResponse = (
+    res: Response,
+    message: string,
+    statusCode = 500,
+) => {
     return res.status(statusCode).json({
         status: false,
         message,
-        data,
     });
 };
