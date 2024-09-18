@@ -13,8 +13,11 @@ export const findAllUsers = async (): Promise<IUser[]> => {
     return users;
 };
 
-export const findUserByEmail = async (email: string): Promise<IUser | null> => {
-    const user = await User.findOne({ email });
+export const findUserByEmail = async (
+    email: string,
+    select: string[] = [],
+): Promise<IUser | null> => {
+    const user = await User.findOne({ email }).select(select);
 
     return user;
 };
