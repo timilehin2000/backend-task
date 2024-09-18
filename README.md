@@ -59,7 +59,7 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
 6. Optionally, **Run with Docker**:
     - Build and run Docker containers:
         ```bash
-        docker-compose up --build
+        docker-compose up
         ```
     - To stop and remove Docker containers:
         ```bash
