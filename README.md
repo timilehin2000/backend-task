@@ -2,7 +2,7 @@
 
 A RESTful API for creating and managing products in a store, with JWT-based authentication for secure access.
 
-#### **BASE URL** - [https://backend-task-cpok.onrender.com/api/v1](https://backend-task-cpok.onrender.com/api/v1)
+#### **BASE URL** - [https://backend-task-cpok.onrender.com/api/v1](https://backend-task-cpok.onrender.com//api/v1)
 
 #### **POSTMAN DOCS** - [API Documentation on Postman](https://documenter.getpostman.com/view/36399546/2sAXqqcNbN#a856406c-037c-462d-a3e8-2f743d8e5fbe)
 
