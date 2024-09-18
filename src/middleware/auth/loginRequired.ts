@@ -26,7 +26,7 @@ const loginRequired = async (
         const user = await findUserById(decoded.id);
 
         if (!user) {
-            return errorResponse(res, 'User not found', 404);
+            return errorResponse(res, 'Invalid or expired token', 404);
         }
 
         req.user = user;
