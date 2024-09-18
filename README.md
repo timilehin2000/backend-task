@@ -1,4 +1,4 @@
-# 📦 Store Products API
+# Store Products API
 
 A RESTful API for creating and managing products in a store, with JWT-based authentication for secure access.
 
@@ -6,7 +6,7 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
 
 #### **POSTMAN DOCS** - [API Documentation on Postman](https://documenter.getpostman.com/view/36399546/2sAXqqcNbN#a856406c-037c-462d-a3e8-2f743d8e5fbe)
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Authentication
 
@@ -23,7 +23,7 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
 
 > **Note**: The `id` field for placing an order should be a valid product identifier (mongoDB Id).
 
-## 🧪 How to Test
+## How to Test
 
 1. **Login** with sample user credentials on Postman.
 2. **Authorization**: API uses a Bearer Token.
@@ -31,7 +31,7 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
 4. **Retrieve Product Data**: Use `/products` and `/products/:id` to manage products.
 5. **Delete Product Details**: Use `/products/:id` to delete specific product information.
 
-## 🛠️ To Run Locally
+## To Run Locally
 
 1. Clone the repository:
 
@@ -66,6 +66,6 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
         docker-compose down
         ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
