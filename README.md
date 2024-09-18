@@ -65,6 +65,11 @@ A RESTful API for creating and managing products in a store, with JWT-based auth
         ```bash
         docker-compose down
         ```
+7. To run tests:
+
+    ```bash
+    npm test
+    ```
 
 ## License
 
