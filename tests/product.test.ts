@@ -9,6 +9,8 @@ import { User } from '../src/models/user.model';
 
 const request = supertest(app);
 
+const generateUniqueEmail = `timi${Date.now()}@gmail.com`;
+
 const postId = new mongoose.Types.ObjectId().toString();
 
 let token: string;
@@ -16,16 +18,13 @@ let token: string;
 const userInput = {
     firstName: 'Timi',
     lastName: 'Abodunrin',
-    email: 'timi@gmail.com',
+    email: generateUniqueEmail,
     password: 'TimiPass123#',
 };
 
 beforeAll(async () => {
     const mongoURI = 'mongodb://localhost:27017/test_db';
     await mongoose.connect(mongoURI);
-
-    const user = await createUser(userInput);
-    token = generateToken(user);
 });
 
 afterAll(async () => {
@@ -35,6 +34,10 @@ afterAll(async () => {
 
 beforeEach(async () => {
     await Product.deleteMany({});
+    await User.deleteMany({});
+
+    const user = await createUser(userInput);
+    token = generateToken(user);
 });
 
 const createProductResponse = {

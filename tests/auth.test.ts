@@ -43,6 +43,7 @@ describe('Auth', () => {
                 .post('/api/v1/auth/register')
                 .send(userInput);
 
+            console.log({ body });
             expect(statusCode).toBe(201);
 
             expect(body.data.firstName).toEqual(createUserResponse.firstName);
